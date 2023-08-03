@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Country Capital Finder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/World_location_map.svg/1200px-World_location_map.svg.png');
+        }
+
+        h1 {
+            color: black;
+            margin-top: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-size: 28px;
+            color: black;
+            margin-top: 20px;
+        }
+
+        select {
+            font-size: 25px;
+            padding: 8px;
+            background-color: 	aqua ;
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #capitalDiv {
+            font-size: 25px;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Country Capital Finder!</h1>
+    <strong><label for="countrySelect">Country Selection:</label></strong><br>
+    <select id="countrySelect" onchange="showCapital()">
+        <option value="Select a Country">Select a Country</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="USA">USA</option>
+        <option value="Germany">Germany</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="France">France</option>
+        
+    </select>
+    <div id="capitalDiv"></div>
+
+    <script>
+        function showCapital() {
+            var countrySelect = document.getElementById("countrySelect");
+            var capitalDiv = document.getElementById("capitalDiv");
+            var selectedCountry = countrySelect.value;
+
+            // Object containing countries and their capitals
+            var countriesCapitals = {
+                "Select a Country": "",
+               "Bangladesh": "Dhaka",
+                "USA": "Washington, D.C.",
+                "Germany": "Berlin",
+                "United Kingdom": "London",
+                "France": "Paris"
+                
+            };
+
+            // Get the capital for the selected country from the object
+            var capital = countriesCapitals[selectedCountry];
+
+            // Update the capitalDiv with the capital information
+            capitalDiv.innerHTML = capital;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ayesha's Web Page</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        #left-frame {
+            flex: 1;
+            background-color: lightblue;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 0%;
+            height: 820px;
+            text-align: left;
+        }
+
+        #center-frame {
+            flex: 3;
+            background-color: lightgray;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 820px;
+        
+        }
+
+        #right-frame {
+            flex: 1;
+            background-color: rgb(243, 177, 220);
+            padding: 10px;
+            box-sizing: border-box;
+            height: 820px;
+            text-align: left;
+        
+        }
+
+        audio, video {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-frame">
+        <h2 align="center"><u>Contents of Pages</u></h2><br>
+        <ul>
+            <li>The webpage starts with a heading (h2) welcoming the users to the audio and video page. The title tag in the (head) section sets the title of the page that appears in the browser's title bar.
+
+            </li><br><br><br>
+
+            <li>The webpage contains two sections, one for audio and the other for video. The audio section includes an HTML5 (audio) element with the controls attribute, which enables the user to play, pause, and adjust the audio volume. If the browser does not support the audio element, a fallback message will be displayed.</li><br><br><br>
+
+            <li>Similarly, the video section includes an HTML5 (video) element with the controls attribute. It also sets the width and height attributes to define the size of the video player. If the browser does not support the video element, a fallback message will be displayed.</li><br><br><br>
+                
+            <li>Additionally, the webpage provides links to download other audio and video resources. When users click on these links, the audio or video files will be downloaded to their devices.</li>
+        </ul>
+        
+    </div>
+
+    <div id="center-frame">
+        <h2>Welcome to Ayesha's Web Page!</h2>
+        <h2>Audios</h2>
+
+        <!-- Embedding an audio -->
+        <audio controls>
+            <source src="piano.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> 
+        <audio controls>
+            <source src="call to the soul.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> <h2>Videos</h2>
+
+        <!-- Embedding a video -->
+   
+        <div >
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wucuNm75o5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br>
+            Your browser does not support the video element.
+        </div>
+    </div>
+
+    <div id="right-frame">
+        <h2 align="center"><u>Remarks</u></h2> <br>
+        <ul>
+           
+            <li><b>Accessibility:</b> The inclusion of the controls attribute for both audio and video elements ensures that users can interact with the media easily. The fallback messages for unsupported audio and video elements enhance accessibility, informing users who may not have compatible browsers.
+            </li><br><br><br>
+            <li><b>Download Links:</b> The links to download additional audio and video resources are a useful addition, especially for users who may want to access the content offline. The inclusion of the download attribute is helpful in facilitating direct downloads.
+
+            </li><br><br>
+            
+            
+            <li><b>File Format Compatibility:</b> It is essential to ensure that the audio and video files are in widely supported formats like MP3 and MP4 to maximize compatibility across various devices and browsers.</li><br><br><br>
+            
+            <li><b>Responsive Design:</b> Consider implementing responsive design practices to ensure the webpage looks good and functions well on different screen sizes, including mobile devices.</li>
+            </ul>
+        
+    </div>
+</body>
+</html>
